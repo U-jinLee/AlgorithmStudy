@@ -1,23 +1,28 @@
 import java.util.*;
 public class MaxInt {
 
-	public static void main(String[] args) {
-		//입력한 3개의 값 중 최댓값을 구하세요
-		Scanner sc = new Scanner(System.in);
-		System.out.println("정수값 세 개를 입력하시오.");
-		int a, b, c;
-		a= sc.nextInt();
-		b= sc.nextInt();
-		c= sc.nextInt();
-		
+	public static int maxInt(int a, int b ,int c) {
 		int max = a;
-		if(b > max) {
+		
+		if(b>max) {
 			max = b;
 		}
-		if(c > max) {
-			max = c; 
+		if(c>max) {
+			max = c;
 		}
-		System.out.println("최대값은 "+max+"입니다.");
+		
+		return max;
 	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("첫 번째 정숫값을 입력");
+		int a= sc.nextInt();
+		System.out.println("두 번째 정숫값을 입력");
+		int b= sc.nextInt();
+		System.out.println("세 번째 정숫값을 입력");
+		int c= sc.nextInt();
 
+		System.out.println(a+", "+b+", "+c+" 세 값중  가장 큰 수는 "+maxInt(a,b,c)+"입니다.");
+	}
 }
